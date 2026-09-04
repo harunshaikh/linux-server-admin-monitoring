@@ -5,8 +5,8 @@ on:
 
 jobs:
   file-creating-logic:
-    runs-on: ubuntu-letest
-
+    runs-on: ubuntu-latest
+    
     steps:
       - name: file-createdd
         run: echo "this file from ci workfolow" > thisCiCdFile.txt
