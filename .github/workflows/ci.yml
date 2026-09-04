@@ -1,21 +1,21 @@
-name: linux-server-chacking
+name: ceating-files-workflow
 
-  on:
-    push:
+on:
+  push:
 
-  jobs:
-    file-creating-logic:
-      runs-on: ubuntu-letest
+jobs:
+  file-creating-logic:
+    runs-on: ubuntu-letest
 
-      steps:
-        - name: file-createdd
-          run: echo "this file from ci workfolow" > thisCiCdFile.txt
+    steps:
+      - name: file-createdd
+        run: echo "this file from ci workfolow" > thisCiCdFile.txt
 
 
-    checking-files:
-      needs: file-creating-logic
-      runs-on: ubuntu-letest
+  checking-files:
+    needs: file-creating-logic
+    runs-on: ubuntu-letest
 
-      steps:
-        - name: showingfiles-data
-          run: cat thisCiCdFile.txt
+    steps:
+      - name: showingfiles-data
+        run: cat thisCiCdFile.txt
