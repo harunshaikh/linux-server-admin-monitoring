@@ -10,11 +10,13 @@ jobs:
     steps:
       - name: file-createdd
         run: echo "this file from ci workfolow" > thisCiCdFile.txt
-
+      
+      - name: showing-data
+        run: cat thisCiCdFile.txt     
 
   checking-files:
     needs: file-creating-logic
-    runs-on: ubuntu-letest
+    runs-on: ubuntu-latest
 
     steps:
       - name: showingfiles-data
